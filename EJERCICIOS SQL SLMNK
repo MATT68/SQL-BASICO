@@ -1,0 +1,95 @@
+EJERCICIO 4 (AGRUPACION)
+
+1) Cuente el número de departamentos distintos que existen en la tabla TEMPL 
+
+2) Obtenga el salario medio de los empleados con código de trabajo superior a 56 y diga cuantos empleados son los seleccionados que han cumplido dicha condición 
+
+3) Liste el salario mensual máximo y mínimo de los empleados del departamento D21 y el número de empleados de dicho departamento 
+
+4) Modifique la consulta anterior para obtener los mismos valores, pero esta vez por cada departamento
+
+5) Modifíquelo ahora de forma que sólo aparezcan aquellos grupos que tengan un mínimo mensual superior a 2.000 
+
+6) Listar el sueldo total medio de los empleados cuyo código de trabajo sea superior a 53. Agrupe la salida por departamento, pero listando sólamente aquellos departamentos que tengan más de un empleado con código de trabajo superior a 53. 
+
+7) Listar el código de todos los departamentos con más de tres empleados 
+
+8) Listar el nombre, apellido y número de hijos de los empleados con hijos. 
+
+9) Listar el nombre y apellidos de los empleados con dos hijos
+
+EJERCICIO 5 (JOINS)
+
+1) Listar una sóla vez el número de empleado, el nombre y el apellido de los empleados que han tenido aumento salarial. 
+
+2) Listar el nombre, apellido, número y nombre del departamento de los empleados varones. 
+
+3) Listar el apellido y el departamento de todos los empleados del departamento de Suarez 
+
+4) Listar las empleadas que han tenido aumento salarial 
+
+5) Listar los empleados que han tenido aumento salarial el último año. 
+
+6) Listar los empleados que han tenido un aumento salarial superior a 5000 
+
+7) Listar los apellidos de todos los empleados junto con la cuantia de sus aumentos salariales. Si nunca hubiese disfrutado de un aumento, escribir ‘SIN AUMENTO’ 
+
+8) Listar todos los empleados casados 
+
+9) Listar todos los empleados con hijos. 
+
+10) Listar todos los empleados que han tenido algún hijo antes de los 30 años. 
+
+11) Listar los nombres y apellidos de los hijos de empleados que han nacido antes de que el empleado trabajara en la compañia. 
+
+12) Listar los empleados casados con hijos
+
+13) Listar el apellido, nombre y salario de los empleados que ganen igual o más que su jefe de departamento, así como el apellido y el salario de su jefe. 
+
+14) Listar todos los nombres y apellidos de los empleados con el nombre del departamento en el que trabajan (si tienen). También deben aparecer todos los nombres de departamentos, aunque todavía no tengan empleados asignados. 
+
+15) Listar los empleados con hijos comunes. 
+
+16) Listar el salario anterior a las subidas de sueldo de los empleados 
+
+17) Liste el nombre y el apellido de los empleados que han tenido un aumento salarial en el último año y que porcentaje supone esta subida respecto al salario anterior. 
+
+18) Calcular que empleados han tenido un aumento salarial superior al 30% 
+
+19) Listar los empleados que han tenido un porcentaje de aumento salarial superior al de su director
+
+EJERCICIO 6 (UNION)
+
+1) Listar todos los empleados que tengan más de 55 años y los que tienen exactamente 45. Diseñe una columna añadida que refleje ‘mayor de 55’ o ‘tiene 45 años’. Evite la clasificación. 
+
+2) Listar el nombre y apellido de los empleados y de los conyuges de los empleados. Clasificar la salida por apellidos. 
+
+3) Utilizando el enunciado del ejercicio anterior, tenga en cuenta que puede haber matrimonios entre empleados de la empresa y por lo tanto deberán aparecer dos veces
+
+EJERCICIO 7  (SUBCONSULTAS)
+
+1)  Listar el apellido y el departamento de todos los empleados que están en el departamento de SUAREZ. No utilizar JOIN. 
+
+2) Liste el salario de SUAREZ, si dicho salario es mayor que la media de todos los salarios. 
+
+3) Liste el número de departamento, apellido y código de trabajo del empleado que más gana de cada departamento 
+
+4) Repetir el ejercicio anterior ordenando la salida en secuencia descendente de salario
+
+5) Listar el código de trabajo, nombre, apellido y salario de los empleados cuyo salario supere la media de salarios de los empleados con el mismo código de trabajo 
+
+6) Listar los hombres que son más jovenes que todas las mujeres o que han ingresado en la compañía antes que la fecha de nacimiento de alguna mujer. Ordenar la salida por código de trabajo y apellido. 
+
+7) Liste el nombre, apellido y salario de aquellas empleadas que ganan más que algún empleado masculino dentro del mismo código de trabajo. Ordenar la salida por código de trabajo y apellido descendente. Resolver el problema con un JOIN y luego con una subconsulta 
+
+8) Contar el número de empleados masculinos mayores que el promedio de edad de todos los empleados de los demás departamentos. 
+
+9) Modifique la consulta anterior para dar la salida separada por departamento 
+
+10) Liste, sin utilizar Join, todos los empleados que tengan hijos 
+
+11) Listar los empleados que hayan tenido aumento salarial en los últimos once meses 
+
+12) Listar, sin utilizar Join, los empleados con dos hijos 
+
+13) Listar, sin utilizar Join, los empleados casados sin hijos
