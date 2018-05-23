@@ -1,0 +1,269 @@
+ 
+ ENVIRONMENT DIVISION.
+
+ FILE CONTROL. 
+ SELECT CLIENTE
+    ASSIGN '/home/user/data/clientes.txt'
+    FILE STATUS IS WS-FILE-STATUS.
+
+        .
+        .
+ DATA DIVISION.
+ FILE SECTION.
+
+ FD  CLIENTE.
+ 01  REG-CLIENTE                          PIC X(97). 
+
+
+ WORKGIN-STORAGE SECTION.
+*
+ 01  WS-VARIABLES. 
+     05  WS-FILE-STATUS                    PIC 99.
+     05  WS-FX-ALTA                        PIC X(8). 
+     05  WS-FX-BAJA                        PIC X(8).
+     05  WS-NOMBRE-MASCOTA                 PIC X(20).
+     05  WS-APELLIDO1-MASCOTA              PIC X(30).
+     05  WS-NOMBRE-DUEÑO                   PIC X(20).
+     05  WS-APELLIDO1-DUEÑO                PIC X(30).
+ 
+        .
+        .
+*
+ 01  WS-REG-CLIENTE. 
+     05  WS-NOMBRE                         PIC X(20).
+     05  WS-APELLIDO1                      PIC X(30).
+     05  WS-APELLIDO2                      PIC X(30).
+     05  WS-SEXO                           PIC X(1).
+     05  WS-FX-ALTA                        PIC X(8). 
+     05  WS-FX-BAJA                        PIC X(8). 
+        .
+        .
+*
+ 01  LT-LITERALES. 
+     05  LT-ALTA                           PIC  X(4) VALUE 'ALTA'.
+     05  LT-BAJA                           PIC  X(4) VALUE 'BAJA'.
+
+*
+ 01  SW-SWITCHES.
+     05  SW-FINAL-FICHERO                   PIC X.
+         88 FINAL-FICHERO 			     VALUE 'Y'.
+         88 NO-FINAL-FICHERO 			     VALUE 'N'.
+*
+ COPY EMPLE_SALIDA REPLACING ........  .
+* 
+PROCEDURE DIVISION.
+
+     
+ *     EXEC SQL 
+ *        SELECT NOMBRE
+ *        INTO   WS-NOMBRE
+ *        FROM CLIENTES
+ *        WHERE NU_CLIENTE = '000100'
+ *    END-EXEC
+
+
+     READ CLIENTE
+      INTO WS-REG-CLIENTE
+
+     SET FINAL-FICHERO TO TRUE 
+ 
+     IF  FINAL-FICHERO 
+         ....
+     END-IF.
+  
+*     IF  SW-FINAL-FICHERO = 'Y'
+*         ....
+*     END-IF.
+
+       
+
+
+ *   MOVE  'ALTA'    TO  WS-MOTIVO  -- No de puede hard-codear 
+     MOVE  LT-ALTA   TO  WS-MOTIVO  
+           
+
+ sudo apt-get update 
+ sudo apt-get install mysql-server
+
+
+ DATA MANIPULATION LANGUAGE (DML)
+ DATA DEFINITION LANGUAGE  (DDL)
+ DATA CONTROL LANGUAGE     (DCL)
+
+ CREATE DATABASE RRHH;
+
+-- User:  FORMA2
+
+ CREATE TABLE EMPLEADOS
+ (
+   NU_EMPLEADO        CHAR(6)       NOT NULL,
+   NOMBRE_EMPLE       CHAR(20)      NOT NULL,
+   APELLIDO1_EMPLE    CHAR(20)      NOT NULL,
+   APELLIDO2_EMPLE    CHAR(20)      NOT NULL,
+   ....
+   SALARIO            DECIMAL(9,2)  NOT NULL, 
+   COMISION           DECIMAL(9,2),
+   ....   
+  );
+
+  NOMBRE COMPLETO DE LA TABLA:   FORMA2.EMPLEADOS
+                              [ESQUEMA].NOMBRE_SIMPLE_TABLA
+
+  
+  --  ESQUEMA PRODUCCIÓN: PROD
+
+        PROD.EMPLEADOS
+        PROD.OFICINAS
+        PROD.DEPARTAMENTOS
+          ....
+          ....
+          ....
+  
+  GRANT  SELECT, UPDATE, DELETE, INSERT ON TABLE PROD.EMPLEADOS TO JOSE, SANDRA, LUCIA
+  GRANT  SELECT, UPDATE, DELETE, INSERT ON TABLE PROD.OFICINAS  TO JOSE, SANDRA, LUCIA
+          ....
+          ....
+
+
+  --  ESQUEMA PRODUCCIÓN: TEST
+
+        TEST.EMPLEADOS
+        TEST.OFICINAS
+        TEST.DEPARTAMENTOS
+          ....
+          ....
+          ....
+
+1.- Mostrar los departamentos con número de director mayor que 100.
+    
+2.- Mostrar los Departamentos con director mayor de 200 y location menor que 2000
+
+3.- Mostrar los Departamentos cuyo nombre termina en 'ING'.
+
+4.- Mostrar los departamentos con número de director entre 100 y 150.
+
+
+
+
+
+
+
+
+
+
+Usuario: forma2 / forma2
+ Dios:    root   / forma2
+ 
+ Algunos distros:
+ BTF:
+	- CentOS
+	- Ubuntu
+	- Fedora
+	- OpenSuse
+	- ... 	  
+ De pago:
+	- RedHat
+	- SUSE
+	- ...
+
+ Home:
+ /home/forma2
+
+ pwd
+ /etc
+
+ cd ~/cobol
+ /home/forma2/cobol
+
+ cd
+ cd cobol
+
+ ----- Creación de usuarios -------
+ -- Primero debo pasar a usuario root 
+ su - 
+
+ -- ó lanzar un comando como root:
+ sudo 
+
+ -- Puedo cambiar a cualquier usuario: 
+ su - user
+
+ -- Comandos de lectura:
+cat
+more 
+less
+head
+tail
+
+Windows :
+autoexec.bat
+
+Linux:
+.profile
+
+Shell: intérprete de comandos
+  bash
+  korn
+
+  Hasta 7 terminales (se abren con Ctrl+Alt+F1 ... Ctrl+Alt+F7 )
+ /dev/tty1
+ /dev/tty2
+  ...
+ /dev/tty7
+
+ Comando para "reiniciar" la máquina:
+ halt -p 
+ 
+ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+                         ENTORNO  COBOL
+
+ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  SENTENCIA IF:
+
+	 IF  ( ARG1 COMP ARG2 )  AND ( ARG3 COMP ARG4 ) 
+             ......
+	 ELSE
+             ...... 
+	 END-IF
+
+ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+     05  WS-NUMERO1             PIC S9(7)99 USAGE COMP-3.
+     05  WS-NUMERO2             PIC S9(7)99 USAGE BINARY.
+     05  WS-NUMERO1-E           PIC S9(7)99.
+     05  WS-NUMERO2-E           PIC ZZZZ9,99 COMP-3.
+
+
+ ESQUEMAS DE CODIFICACION DE CARACTERES:
+	- ASCII
+		A - 41
+		a -   
+		Ñ - 
+	- EBCDIC  (SBCS, DBCS)
+		A - C1
+		a - 
+		Ñ - 
+	- UNICODE (UTF-8 UTF-16)
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
