@@ -1,4 +1,21 @@
-﻿
+
+SELECT COD_CONTRAPARTE_FECHA, 
+         LENGTH(cod_contraparte_fecha) LONGITUD,   
+           --CONTAMOS LA LONGITUD DEL CAMPO cod_contraparte_fecha
+         SUBSTR(cod_contraparte_fecha,1,LENGTH(cod_contraparte_fecha)-10) CODIGO_CONTRAPARTE, 
+           -- cortamos una subcadena de caracteres desde la posicion 1 hasta
+           -- la longitud anterior menos 10 que es lo que ocupa la fecha
+         SUBSTR(cod_contraparte_fecha,LENGTH(cod_contraparte_fecha)-9) FECHA_CONTRAPARTE,
+         COD_CONTRAPARTE, 
+         COD_PAIS, 
+         SUBSTR(COD_PAIS,1,4) AS SOLO_PAIS,
+         SUBSTR(COD_PAIS,5)      SOLO_FECHA,
+         COD_SEGMENTO_BIS_II,
+         NVL(TO_CHAR(FECHA_FORZAJE,'YYYY-MM-DD'),'VACIA')
+  FROM CONTRAPARTE
+  WHERE COD_CONTRAPARTE_FECHA LIKE 'P0%' OR 
+        COD_CONTRAPARTE_FECHA LIKE 'G00000000%'; 
+	
 SELECT COD_CONTRAPARTE_FECHA, COD_OPERACION_FECHA, TIPO_INTERVENCION,
        NVL(COD_ENTIDAD_FECHA,'XXXX')
   FROM CONTRAPARTE_OPERACION 
