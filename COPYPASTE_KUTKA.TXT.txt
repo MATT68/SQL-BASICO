@@ -1,4 +1,13 @@
 
+SELECT COD_CONTRAPARTE_FECHA ||  
+         COD_CONTRAPARTE ||  
+         COD_PAIS || 
+         COD_SEGMENTO_BIS_II   as TODO_JUNTO
+
+  FROM CONTRAPARTE
+  WHERE COD_CONTRAPARTE_FECHA LIKE 'P0%' OR 
+        COD_CONTRAPARTE_FECHA LIKE 'G00000000%'; 
+  
 SELECT COD_CONTRAPARTE_FECHA, 
          LENGTH(cod_contraparte_fecha) LONGITUD,   
            --CONTAMOS LA LONGITUD DEL CAMPO cod_contraparte_fecha
@@ -51,6 +60,9 @@ SELECT COD_CONTRAPARTE_FECHA, COD_OPERACION_FECHA, TIPO_INTERVENCION,
                     FROM TEMPLA
                     WHERE DEPT = E.DEPT )
 
+----------  HASTA AQUI LLEGAN LOS EJEMPLOS DE KUTXA  ---------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
 ----    SUBCONSULTAS CON VARIAS FILAS RESULTADO -------------------
 
  SELECT NUEMPL, NOMBRE, APELLIDO, SALARIO
