@@ -24,6 +24,44 @@
    WHERE ID_CLIENTE = 2345
 -- Si es un campo numérico, se escribe sin comillas
 
+  SELECT NOMBRE, APELLIDO1, APELLIDO2, NIF, EMAIL
+    FROM CLIENTES
+   WHERE NOMBRE > 'JOSE';
+   
+  SELECT NOMBRE, APELLIDO1, APELLIDO2, NIF, EMAIL
+    FROM CLIENTES
+--   WHERE TLF LIKE  '6%';
+     WHERE TLF LIKE  '%6';
+     WHERE TLF LIKE  '%6%';     
+     WHERE TLF LIKE  '_6%';
+-- Clientes que se apelliden 'GARCIA RAMOS'
+  SELECT NOMBRE, APELLIDO1, APELLIDO2, NIF, EMAIL
+    FROM CLIENTES
+     WHERE APELLIDO1 = 'GARCIA'
+       AND APELLIDO2 = 'RAMOS';
+
+-- Clientes que tengan de primer apellido 'GARCIA' ó 'RAMOS'
+  SELECT NOMBRE, APELLIDO1, APELLIDO2, NIF, EMAIL
+    FROM CLIENTES
+     WHERE APELLIDO1 = 'GARCIA'
+       OR  APELLIDO1 = 'RAMOS';
+
+
+--- BETWEEN
+  SELECT NOMBRE, APELLIDO1, APELLIDO2, NIF, EMAIL
+    FROM CLIENTES
+     WHERE TLF BETWEEN '6100' AND '6500';
+     
+-- Esta query también se podría escribir así:
+
+  SELECT NOMBRE, APELLIDO1, APELLIDO2, NIF, EMAIL
+    FROM CLIENTES
+     WHERE TLF >= '6100'
+       AND TLF <=  '6500';
+
+
+
+
  CREATE TABLE TEMPLA               
          (NUEMPL  CHAR(6)        NOT NULL, 
          NOMBRE   VARCHAR(12)    NOT NULL, 
