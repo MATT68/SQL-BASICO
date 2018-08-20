@@ -30,6 +30,7 @@
          INICIAL  CHAR(1)        NOT NULL, 
          APELLIDO VARCHAR(15)    NOT NULL, 
          DEPT     CHAR(3)        NOT NULL, 
+         FOTO     BLOB(12 M)             , 
          TLFN     CHAR(4)                , 
          FECHING  DATE                   , 
          CODTRA   NUMBER(3)             , 
@@ -37,3 +38,17 @@
          SEXO     CHAR(1)                , 
          FECHNAC  DATE                   , 
 SALARIO NUMBER(8, 2) );
+TIPOS DE DATOS NUMÉRICOS:
+INTEGER    SMALLINT   TINYINT
+DECIMAL(P,S)     NUMBER(M,N)
+FLOAT   REAL    DOUBLE
+
+LOB  -Large OBjects-:
+CLOB - Character LOB   2 GB. / 4 GB.
+BLOB - Binary    LOB   2 GB. / 4 GB. /   
+
+
+
+
+
+
