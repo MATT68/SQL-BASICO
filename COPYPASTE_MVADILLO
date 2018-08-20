@@ -17,3 +17,23 @@
    WHERE APELLIDO1 = 'GARCIA'
    ORDER BY NOMBRE, NIF;
 -- lee los GARCIA y los ordena por nombre y NIF
+
+
+  SELECT NOMBRE, APELLIDO1, APELLIDO2, NIF, EMAIL
+    FROM CLIENTES
+   WHERE ID_CLIENTE = 2345
+-- Si es un campo numérico, se escribe sin comillas
+
+ CREATE TABLE TEMPLA               
+         (NUEMPL  CHAR(6)        NOT NULL, 
+         NOMBRE   VARCHAR(12)    NOT NULL, 
+         INICIAL  CHAR(1)        NOT NULL, 
+         APELLIDO VARCHAR(15)    NOT NULL, 
+         DEPT     CHAR(3)        NOT NULL, 
+         TLFN     CHAR(4)                , 
+         FECHING  DATE                   , 
+         CODTRA   NUMBER(3)             , 
+         NIVEDUC  NUMBER(6)               , 
+         SEXO     CHAR(1)                , 
+         FECHNAC  DATE                   , 
+SALARIO NUMBER(8, 2) );
