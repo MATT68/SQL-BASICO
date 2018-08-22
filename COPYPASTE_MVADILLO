@@ -161,5 +161,17 @@ C:\MySQL\mysql employees sample database\test_db-master\test_db-master>dir
 C:\loquesea> c:\MySQL\mysql-5.6.11-win32\mysql-5.6.11-win32\bin\mysql -t < employees.sql -u root -p
 
 
+SELECT NUEMPL, NOMBRE, APELLIDO
+ FROM TEMPLA E 
+WHERE NOT EXISTS
+  ( SELECT NUEMPL 
+    FROM HIJOS
+    WHERE NUEMPL = E.NUEMPL);
 
+SELECT NOMBRE, APELLIDO, SALARIO
+FROM TEMPLA
+WHERE SALARIO > 
+    (SELECT AVG(SALARIO) FROM TEMPLA);
+    
+    
 
