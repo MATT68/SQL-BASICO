@@ -49,7 +49,19 @@ FUNC. AGRUPACION
 
 7.- MOSTRAR EL NÚMERO DE EMPLEADOS CONTRATADOS EN CADA DÍA DE LA SEMANA 
     (LUNES, MARTES, ETC.)
+-------------------------------------------------------
+RESTO DE SENTENCIAS DML (INSERT UPDATE DELETE):
 
+- Añadir estas filas a la tabla de CONYUGES (si alguno existe, hacemos un UPDATE):
+  000330   MARCOS     LLORENTE           1998-09-12
+  000290   LUISA      RAMOS              1996-09-12
+  000220   ANA MARIA  AZPILICUETA        1996-09-12
+  000230                                 1985-09-12
+  
+- Borra las filas 000220 y 000290 de la tabla de CONYUGES. 
+  
+  
+  
 -------------------------------------------------------
 JOINS Y/O  SUBCONSULTAS ...
 
